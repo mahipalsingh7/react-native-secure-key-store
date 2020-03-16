@@ -62,9 +62,7 @@ static NSString *serviceName = @"RNSecureKeyStoreKeyChain";
     
     NSDictionary *found = nil;
     CFTypeRef result = NULL;
-    OSStatus status = SecItemCopyMatching((CFDictionaryRef)searchDictionary,
-                                          (CFTypeRef *)&result);
-    
+     
     NSString *value = nil;
     found = (__bridge NSDictionary*)(result);
     if (found) {
